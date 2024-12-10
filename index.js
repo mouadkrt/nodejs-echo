@@ -21,6 +21,10 @@ app.post('/raw', (req, res) => {
     res.send(req.rawBody);
 });
 
+app.post('/req', (req, res) => {
+    console.log('Req:', req);
+});
+
 // Start the server on port 3000
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
