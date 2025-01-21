@@ -21,6 +21,16 @@ app.post('/raw', (req, res) => {
     res.send(req.rawBody);
 });
 
+app.post('/v1/raw', (req, res) => {
+    console.log('v1 Raw:', req.rawBody);
+    res.send(req.rawBody);
+});
+
+app.post('/v1/req', (req, res) => {
+    console.log('v1 Req:', req);
+    res.send(req);
+});
+
 app.get('/get', (req, res) => {
     console.log('Raw:', req.rawBody);
     res.send(req.rawBody);
