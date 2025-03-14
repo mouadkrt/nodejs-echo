@@ -40,6 +40,13 @@ app.post('/req', (req, res) => {
     console.log('Req:', req);
 });
 
+
+app.get('/400', (req, res) => { res.status(400).send("response muis 400"); });
+app.get('/401', (req, res) => { res.status(401).send("response muis 401"); });
+app.get('/403', (req, res) => { res.status(403).send("response muis 403"); });
+app.get('/500', (req, res) => { res.status(500).send("response muis 500"); });
+app.get('/503', (req, res) => { res.status(503).send("response muis 503"); });
+
 // Start the server on port 3000
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
